@@ -13,6 +13,14 @@ range(7, 6); // []
 
 function range(start, end) {
   // Your code here
+  console.log("Start is: ", start)
+  console.log(`Does ${start} = ${end}?`)
+  if (start >= end) {
+    console.log(`yes ${start} is now equal to ${end}.`)
+    return [];
+  } else {
+    return [start, ...range(start + 1, end)]
+  }
 }
 
 
